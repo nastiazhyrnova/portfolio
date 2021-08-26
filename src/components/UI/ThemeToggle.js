@@ -1,24 +1,29 @@
-import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
 import Switch from 'react-switch';
 
 import { IconContext } from 'react-icons/lib';
 import { IoIosMoon } from 'react-icons/io';
 import { WiDaySunny } from 'react-icons/wi';
 
-import 'react-toggle/style.css';
+import { TOGGLE_THEME } from '../../store/actionTypes';
 
 const ThemeToggle = () => {
-	const [lightTheme, setLightTheme] = useState(false);
+	const theme = useSelector(state => state.theme);
+	const dispatch = useDispatch();
 
-	const toggleTheme = () => setLightTheme(!lightTheme);
+	const toggleTheme = () => {
+		dispatch({
+			type: TOGGLE_THEME,
+		});
+	};
 
-	//TODO: connect global state to the theme switcher
 	return (
 		<>
 			<Switch
 				className='react-switch'
+				checked={theme === 'light' ? true : false}
 				onChange={toggleTheme}
-				checked={lightTheme}
 				aria-label='Toggle between dark and light mode'
 				checkedIcon={
 					<IconContext.Provider

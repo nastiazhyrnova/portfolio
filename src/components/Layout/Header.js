@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 
 import ThemeToggle from '../UI/ThemeToggle';
@@ -25,9 +26,11 @@ const Logo = styled.img`
 `;
 
 const Header = props => {
+	const theme = useSelector(state => state.theme);
+
 	return (
 		<HeaderStyled>
-			<Logo src={logoLight} alt='Logo nZh' />
+			<Logo src={theme === 'light' ? logoDark : logoLight} alt='Logo nZh' />
 			<MainNav />
 			<ThemeToggle />
 		</HeaderStyled>
