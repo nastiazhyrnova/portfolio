@@ -16,6 +16,8 @@ const ThemeToggle = () => {
 		dispatch({
 			type: TOGGLE_THEME,
 		});
+		const newTheme = `${theme === 'light' ? 'dark' : 'light'}`;
+		localStorage.setItem('theme', newTheme);
 	};
 
 	return (

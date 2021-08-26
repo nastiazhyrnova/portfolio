@@ -1,4 +1,4 @@
-import { TOGGLE_THEME } from '../actionTypes';
+import { TOGGLE_THEME, SET_THEME } from '../actionTypes';
 
 const themeReducer = (state = 'light', action) => {
 	switch (action.type) {
@@ -8,6 +8,8 @@ const themeReducer = (state = 'light', action) => {
 			} else {
 				return 'light';
 			}
+		case SET_THEME:
+			return action.theme;
 		default:
 			return state;
 	}
