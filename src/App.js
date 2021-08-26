@@ -1,10 +1,13 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
+
 import { lightTheme, darkTheme } from './styles/Themes';
 
 import GlobalStyles from './styles/GlobalStyles';
 import Home from './pages/Home';
+import Routes from './Routes';
 
 import { SET_THEME } from './store/actionTypes';
 
@@ -24,10 +27,12 @@ const App = () => {
 	}, []);
 
 	return (
-		<ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-			<GlobalStyles />
-			<Home />
-		</ThemeProvider>
+		<BrowserRouter>
+			<ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+				<GlobalStyles />
+				<Routes />
+			</ThemeProvider>
+		</BrowserRouter>
 	);
 };
 

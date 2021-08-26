@@ -5,7 +5,8 @@ const GlobalStyles = createGlobalStyle`
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  transition: 0.3s all ease-out;
+  transition: 0.1s all ease-out;
+  font-family: 'Inter', sans-serif;
 }
 :root {
   --white-color: #ffffff;
@@ -25,7 +26,6 @@ html {
 body {
   background-color: ${props => props.theme.mainBg};
   color: ${props => props.theme.mainText};
-  font-family: 'Inter', sans-serif;
 }
 main, header, footer {
   margin: 0 auto;
@@ -36,6 +36,11 @@ main, header, footer {
 main {
   flex: 2 1 0;
 }
+a {
+  color: inherit;
+  text-decoration: none
+}
+
 `;
 
 export default GlobalStyles;
