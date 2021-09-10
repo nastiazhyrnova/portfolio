@@ -12,6 +12,6 @@ export const darkTheme = {
 	componentsBg: 'var(--dark-grey-color)',
 	buttonBg: 'var(--white-color)',
 	mainText: 'var(--white-color)',
-	secondaryText: 'var(--light-grey-color)',
-	additionalText: 'var(--mid-grey-color)',
+	secondaryText: 'var(--mid-grey-color)',
+	additionalText: 'var(--dark-grey-color)',
 };

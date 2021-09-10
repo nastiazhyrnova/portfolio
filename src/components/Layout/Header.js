@@ -16,8 +16,19 @@ const HeaderStyled = styled.header`
 	div {
 		flex: 1 0 auto;
 	}
+	& img {
+		max-width: 100px;
+	}
 	& nav {
 		flex: 3 1 auto;
+	}
+
+	@media (max-width: 767px) {
+		display: none;
+		background-color: ${props => props.theme.mainBg};
+		flex-direction: column;
+		position: fixed;
+		height: 100vh;
 	}
 `;
 

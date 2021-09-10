@@ -8,6 +8,11 @@ const List = styled.ul`
 	align-items: center;
 	justify-content: center;
 	gap: 0rem;
+
+	@media (max-width: 767px) {
+		flex-direction: column;
+		gap: 1.5rem;
+	}
 `;
 
 const NavItems = props => {

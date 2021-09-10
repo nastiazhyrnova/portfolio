@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import styled from 'styled-components';
 
 import Footer from './Footer';
@@ -11,6 +13,8 @@ const LayoutStyled = styled.div`
 `;
 
 const Layout = props => {
+	const [showHeader, setShowHeader] = useState(true);
+
 	return (
 		<LayoutStyled>
 			<Header />
@@ -21,3 +25,5 @@ const Layout = props => {
 };
 
 export default Layout;
+
+//TODO - set  a burger icon and show conditionally header if it is mobile view

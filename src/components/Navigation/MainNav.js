@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import NavItem from '../UI/NavItems/NavItem';
+import NavItem from './NavItems/NavItem';
 
-import NavItems from '../UI/NavItems/NavItems';
+import NavItems from './NavItems/NavItems';
 
 const MainNav = () => {
 	const items = [
