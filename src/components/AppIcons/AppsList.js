@@ -35,12 +35,12 @@ export const TECHS = [
 		icon: <SiRedux />,
 	},
 	{
-		title: 'styled-components',
-		icon: <SiStyledComponents />,
-	},
-	{
 		title: 'React Router',
 		icon: <SiReactrouter />,
+	},
+	{
+		title: 'styled-components',
+		icon: <SiStyledComponents />,
 	},
 	{
 		title: 'JavaScript',

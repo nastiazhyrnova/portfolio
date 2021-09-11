@@ -1,8 +1,8 @@
 import NavItems from './NavItems/NavItems';
 
-const MainNav = () => {
+const MainNav = props => {
 	const items = [
-		{ name: 'Home', path: '/' },
+		{ name: 'Home', path: '/#home', hashlink: true },
 		{ name: 'Skills', path: '/#skills', hashlink: true },
 		{ name: 'Projects', path: '/projects' },
 		{ name: 'About', path: '/about' },
@@ -12,7 +12,7 @@ const MainNav = () => {
 
 	return (
 		<nav>
-			<NavItems items={items} navlink />
+			<NavItems items={items} navlink closeMobileMenu={props.closeMobileMenu} />
 		</nav>
 	);
 };

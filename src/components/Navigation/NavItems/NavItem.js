@@ -30,19 +30,27 @@ const ButtonStyled = styled.button`
 `;
 
 const NavItem = props => {
+	const navLinkEl = (
+		<NavLinkStyled to={props.path} onClick={props.closeMobileMenu}>
+			{props.name}
+		</NavLinkStyled>
+	);
+
+	const navHashLinkEl = (
+		<NavHashLinkStyled smooth to={props.path} onClick={props.closeMobileMenu}>
+			{props.name}
+		</NavHashLinkStyled>
+	);
+
+	const button = (
+		<ButtonStyled {...props} onClick={props.closeMobileMenu}>
+			{props.name}
+		</ButtonStyled>
+	);
+
 	return (
 		<li>
-			{props.navlink ? (
-				props.haslink ? (
-					<NavLinkStyled to={props.path}>{props.name}</NavLinkStyled>
-				) : (
-					<NavHashLinkStyled smooth to={props.path}>
-						{props.name}
-					</NavHashLinkStyled>
-				)
-			) : (
-				<ButtonStyled {...props}>{props.name}</ButtonStyled>
-			)}
+			{props.navlink ? (props.hashlink ? navLinkEl : navHashLinkEl) : button}
 		</li>
 	);
 };

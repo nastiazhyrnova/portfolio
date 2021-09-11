@@ -25,6 +25,7 @@ const NavItems = props => {
 					path={item.path}
 					navlink={props.navlink}
 					hashlink={props.hashlink}
+					closeMobileMenu={props.closeMobileMenu}
 				/>
 			))}
 		</List>

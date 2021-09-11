@@ -8,7 +8,7 @@ const ButtonStyled = styled.button`
 	padding: 1rem 3rem;
 	font-size: 1.25rem;
 	border-radius: 1rem;
-	margin: 7rem 0 2rem;
+	margin: 1rem 0;
 
 	&:hover {
 		cursor: pointer;

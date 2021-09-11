@@ -49,11 +49,11 @@ h2 {
 }
 h3 {
   font-size: 2.25rem;
-  margin: 7rem 0 3rem;
+  padding: 7rem 0 3rem;
 }
 h4 {
   font-size: 1.8rem;
-  margin: 1.5rem 0;
+  padding: 1.5rem 0;
   font-weight: 500;
 }
 .icon {

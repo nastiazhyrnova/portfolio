@@ -19,10 +19,11 @@ const AppIcon = props => {
 	const theme = useTheme();
 
 	return (
-		<IconWrapper title={`${props.title} ${props.subtitle}`}>
+		<IconWrapper
+			title={`${props.title} ${props.subtitle ? props.subtitle : ''}`}>
 			<Icon
 				icon={props.icon}
-				title={`${props.title} ${props.subtitle}`}
+				title={`${props.title} ${props.subtitle ? props.subtitle : ''}`}
 				size={props.size}
 				color={theme.secondaryText}
 			/>

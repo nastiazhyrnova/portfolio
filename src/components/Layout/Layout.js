@@ -1,9 +1,14 @@
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 import styled from 'styled-components';
 
 import Footer from './Footer';
 import Header from './Header';
+import Burger from '../Navigation/Burger';
+
+import logoDark from '../../assets/logo/logoDark.svg';
+import logoLight from '../../assets/logo/logoLight.svg';
 
 const LayoutStyled = styled.div`
 	min-height: 100vh;
@@ -12,12 +17,42 @@ const LayoutStyled = styled.div`
 	justify-content: space-between;
 `;
 
+const MobileHeader = styled.div`
+	background-color: ${props => props.theme.mainBg};
+	/* background-color: blue; */
+	z-index: 98;
+	width: 100%;
+	position: fixed;
+	height: 3.5rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+`;
+const Logo = styled.img`
+	height: 2rem;
+	margin: 1rem;
+`;
+
 const Layout = props => {
-	const [showHeader, setShowHeader] = useState(true);
+	const [showMobileMenu, setShowMobileMenu] = useState(true);
+	const theme = useSelector(state => state.theme);
 
 	return (
 		<LayoutStyled>
-			<Header />
+			<MobileHeader>
+				{' '}
+				<Logo src={theme === 'light' ? logoDark : logoLight} alt='Logo nZh' />
+			</MobileHeader>
+			<Burger
+				isActive={showMobileMenu}
+				onClick={() => setShowMobileMenu(!showMobileMenu)}
+			/>
+
+			<Header
+				showMobile={showMobileMenu}
+				closeMobileMenu={() => setShowMobileMenu(false)}
+			/>
 			<main>{props.children}</main>
 			<Footer />
 		</LayoutStyled>
@@ -25,5 +60,3 @@ const Layout = props => {
 };
 
 export default Layout;
-
-//TODO - set  a burger icon and show conditionally header if it is mobile view

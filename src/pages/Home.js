@@ -16,24 +16,20 @@ const Photo = styled.img`
 	border-radius: 50%;
 	margin: 4rem 0;
 `;
-
 const MainTitleWrapper = styled.div`
 	h1 {
 		display: inline-block;
 	}
 `;
-
 const AccentColor = styled.h1`
 	display: inline-block;
 	color: var(--accent-color);
 `;
-
 const Description = styled.p`
 	max-width: 800px;
 	text-align: justify;
 	margin-bottom: 2rem;
 `;
-
 const DevSkillsList = styled.ul`
 	list-style-type: '→ ';
 	text-align: left;
@@ -48,16 +44,18 @@ const DevSkillsList = styled.ul`
 const Home = props => {
 	return (
 		<Layout>
-			<Photo src={myPhoto} alt='My photo' />
-			<MainTitleWrapper>
-				<AccentColor>Nastia</AccentColor> <h1>Zhyrnova</h1>
-			</MainTitleWrapper>
-			<h4>Front-end Developer</h4>
-			<Description>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua.
-			</Description>
-			<SocialNetworks />
+			<section id='home'>
+				<Photo src={myPhoto} alt='My photo' />
+				<MainTitleWrapper>
+					<AccentColor>Nastia</AccentColor> <h1>Zhyrnova</h1>
+				</MainTitleWrapper>
+				<h4>Front-end Developer</h4>
+				<Description>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				</Description>
+				<SocialNetworks />
+			</section>
 			<section id='skills'>
 				<h3>Tech stack & tools</h3>
 				<AppIcons list={TECHS} size='3.5rem' />
@@ -76,10 +74,16 @@ const Home = props => {
 				<AppIcons list={OTHER} size='2.75rem' />
 			</section>
 			<section id='cv'>
-				<Button>
-					{/* //TODO - add link to the CV file*/}
-					<Icon icon={<HiDownload />} /> Download full CV
-				</Button>
+				<h3>My full CV:</h3>
+				<a
+					href='https://nastiazhyrnova.com/cv.pdf'
+					target='_blank'
+					rel='noreferrer'
+					title='Download full CV'>
+					<Button>
+						<Icon icon={<HiDownload />} /> Download CV
+					</Button>
+				</a>
 			</section>
 		</Layout>
 	);
