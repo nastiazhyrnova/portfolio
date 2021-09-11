@@ -15,15 +15,15 @@ const IconWrapper = styled.div`
 	}
 `;
 
-const TechIcon = props => {
+const AppIcon = props => {
 	const theme = useTheme();
 
 	return (
-		<IconWrapper title={props.title}>
+		<IconWrapper title={`${props.title} ${props.subtitle}`}>
 			<Icon
 				icon={props.icon}
-				title={props.title}
-				size='3.5rem'
+				title={`${props.title} ${props.subtitle}`}
+				size={props.size}
 				color={theme.secondaryText}
 			/>
 			<div>
@@ -34,4 +34,4 @@ const TechIcon = props => {
 	);
 };
 
-export default TechIcon;
+export default AppIcon;

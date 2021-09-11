@@ -24,6 +24,7 @@ const NavItems = props => {
 					name={item.name}
 					path={item.path}
 					navlink={props.navlink}
+					hashlink={props.hashlink}
 				/>
 			))}
 		</List>

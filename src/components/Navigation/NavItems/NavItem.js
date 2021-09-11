@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 import styled, { css } from 'styled-components';
 
 const linkStyles = css`
@@ -17,6 +18,10 @@ const NavLinkStyled = styled(NavLink)`
 	${linkStyles}
 `;
 
+const NavHashLinkStyled = styled(NavHashLink)`
+	${linkStyles}
+`;
+
 const ButtonStyled = styled.button`
 	${linkStyles}
 	outline: none;
@@ -28,7 +33,13 @@ const NavItem = props => {
 	return (
 		<li>
 			{props.navlink ? (
-				<NavLinkStyled to={props.path}>{props.name}</NavLinkStyled>
+				props.haslink ? (
+					<NavLinkStyled to={props.path}>{props.name}</NavLinkStyled>
+				) : (
+					<NavHashLinkStyled smooth to={props.path}>
+						{props.name}
+					</NavHashLinkStyled>
+				)
 			) : (
 				<ButtonStyled {...props}>{props.name}</ButtonStyled>
 			)}

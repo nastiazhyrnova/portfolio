@@ -44,10 +44,14 @@ h1 {
   font-size: 4rem
 }
 h2 {
+  font-size: 3rem;
+  /* margin: 5rem 0 0; */
+}
+h3 {
   font-size: 2.25rem;
   margin: 7rem 0 3rem;
 }
-h3 {
+h4 {
   font-size: 1.8rem;
   margin: 1.5rem 0;
   font-weight: 500;

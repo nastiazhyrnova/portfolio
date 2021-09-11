@@ -8,6 +8,16 @@ import {
 	SiPostman,
 	SiVisualstudiocode,
 	SiNpm,
+	SiStyledComponents,
+	SiReactrouter,
+	SiAdobephotoshop,
+	SiAdobeillustrator,
+	SiAdobexd,
+	SiAdobeindesign,
+	SiSap,
+	SiTrello,
+	SiNotion,
+	SiMicrosoftexcel,
 } from 'react-icons/si';
 import { IoLogoSass } from 'react-icons/io';
 import { FaGitAlt } from 'react-icons/fa';
@@ -20,9 +30,17 @@ export const TECHS = [
 		icon: <SiReact />,
 	},
 	{
-		title: 'Redux & Redux',
-		subtitle: 'toolkit',
+		title: 'Redux & toolkit,',
+		subtitle: 'Redux-thunk',
 		icon: <SiRedux />,
+	},
+	{
+		title: 'styled-components',
+		icon: <SiStyledComponents />,
+	},
+	{
+		title: 'React Router',
+		icon: <SiReactrouter />,
 	},
 	{
 		title: 'JavaScript',
@@ -64,5 +82,46 @@ export const TECHS = [
 	{
 		title: 'Wordpress',
 		icon: <ImWordpress />,
+	},
+];
+
+export const OTHER = [
+	{
+		title: 'Adobe',
+		subtitle: 'XD',
+		icon: <SiAdobexd />,
+	},
+	{
+		title: 'Adobe',
+		subtitle: 'Photoshop',
+		icon: <SiAdobephotoshop />,
+	},
+	{
+		title: 'Adobe',
+		subtitle: 'Illustrator',
+		icon: <SiAdobeillustrator />,
+	},
+	// {
+	// 	title: 'Adobe InDesign',
+	// 	icon: <SiAdobeindesign />,
+	// },
+	{
+		title: 'SAP',
+		subtitle: '(FI, MM)',
+		icon: <SiSap />,
+	},
+	{
+		title: 'Excel',
+		subtitle: '(+macros)',
+		icon: <SiMicrosoftexcel />,
+	},
+
+	{
+		title: 'Trello',
+		icon: <SiTrello />,
+	},
+	{
+		title: 'Notion',
+		icon: <SiNotion />,
 	},
 ];

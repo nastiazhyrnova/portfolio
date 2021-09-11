@@ -1,17 +1,13 @@
 import styled from 'styled-components';
 
-import TechIcon from './TechIcon';
-
-import { TECHS } from './TechList';
+import AppIcon from './AppIcon';
 
 const IconsContainer = styled.div`
 	display: grid;
 	gap: 2.5rem 1rem;
-	grid-template-columns: repeat(6, 1fr);
-	align-items: flex-start;
-	justify-content: space-evenly;
-	/* flex-wrap: wrap; */
-	max-width: 750px;
+	grid-template-columns: repeat(7, 1fr);
+	align-items: start;
+	max-width: 1000px;
 	margin: 0 auto;
 
 	@media (max-width: 767px) {
@@ -19,17 +15,18 @@ const IconsContainer = styled.div`
 	}
 `;
 
-const TechIcons = props => {
-	const icons = TECHS.map(tech => (
-		<TechIcon
+const AppIcons = props => {
+	const icons = props.list.map(tech => (
+		<AppIcon
 			icon={tech.icon}
 			title={tech.title}
 			subtitle={tech.subtitle}
-			key={tech.title}
+			key={`${tech.title} ${tech.subtitle && tech.subtitle}`}
+			size={props.size}
 		/>
 	));
 
 	return <IconsContainer>{icons}</IconsContainer>;
 };
 
-export default TechIcons;
+export default AppIcons;

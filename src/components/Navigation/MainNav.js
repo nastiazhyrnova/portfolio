@@ -1,15 +1,12 @@
-import styled from 'styled-components';
-import NavItem from './NavItems/NavItem';
-
 import NavItems from './NavItems/NavItems';
 
 const MainNav = () => {
 	const items = [
 		{ name: 'Home', path: '/' },
-		{ name: 'Skills', path: '/skills' },
+		{ name: 'Skills', path: '/#skills', hashlink: true },
 		{ name: 'Projects', path: '/projects' },
 		{ name: 'About', path: '/about' },
-		{ name: 'CV', path: '/cv' },
+		{ name: 'CV', path: '/#cv', hashlink: true },
 		{ name: 'Contact', path: '/contact' },
 	];
 
