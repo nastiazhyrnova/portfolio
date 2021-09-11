@@ -19,7 +19,6 @@ const LayoutStyled = styled.div`
 
 const MobileHeader = styled.div`
 	background-color: ${props => props.theme.mainBg};
-	/* background-color: blue; */
 	z-index: 98;
 	width: 100%;
 	position: fixed;
@@ -32,6 +31,10 @@ const MobileHeader = styled.div`
 const Logo = styled.img`
 	height: 2rem;
 	margin: 1rem;
+
+	@media (min-width: 768px) {
+		display: none;
+	}
 `;
 
 const Layout = props => {

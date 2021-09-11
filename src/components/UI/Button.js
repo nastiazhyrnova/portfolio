@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 const ButtonStyled = styled.button`
-	background-color: ${props => props.theme.buttonBg};
-	color: ${props => props.theme.mainBg};
+	background-color: var(--accent-color);
+	color: var(--white-color);
+
 	outline: none;
 	border: none;
 	padding: 1rem 3rem;
@@ -12,8 +13,8 @@ const ButtonStyled = styled.button`
 
 	&:hover {
 		cursor: pointer;
-		background-color: var(--accent-color);
-		color: var(--white-color);
+		background-color: ${props => props.theme.buttonBg};
+		color: ${props => props.theme.mainBg};
 	}
 `;
 
