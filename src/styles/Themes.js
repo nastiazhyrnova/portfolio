@@ -5,6 +5,7 @@ export const lightTheme = {
 	mainText: 'var(--black-color)',
 	secondaryText: 'var(--dark-grey-color)',
 	additionalText: 'var(--mid-grey-color)',
+	shadow: 'var(--mid-grey-color)',
 };
 
 export const darkTheme = {
@@ -14,4 +15,5 @@ export const darkTheme = {
 	mainText: 'var(--white-color)',
 	secondaryText: 'var(--mid-grey-color)',
 	additionalText: 'var(--dark-grey-color)',
+	shadow: 'var(--the-darkest-black-color)',
 };

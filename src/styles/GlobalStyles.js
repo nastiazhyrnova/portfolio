@@ -12,8 +12,9 @@ const GlobalStyles = createGlobalStyle`
   --white-color: #ffffff;
   --light-grey-color: #F5F5F5;
   --mid-grey-color: #D3D3D3;
-  --dark-grey-color: #777777;
+  --dark-grey-color: #505050;
   --black-color: #333333;
+  --the-darkest-black-color: #1c1c1c;
   --accent-color: #F15A29;
   --breakpoint-mobile: 767px;
 }
@@ -44,17 +45,17 @@ h1 {
   font-size: 4rem
 }
 h2 {
-  font-size: 3rem;
-  /* margin: 5rem 0 0; */
+  font-size: 2.5rem;
+  padding: 1rem 0;
 }
 h3 {
   font-size: 2.25rem;
   padding: 7rem 0 3rem;
 }
 h4 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   padding: 1.5rem 0;
-  font-weight: 500;
+  font-weight: 600;
 }
 .icon {
   vertical-align: middle;
@@ -62,11 +63,6 @@ h4 {
 .icon:hover {
   color: var(--accent-color)
 }
-/* @media (max-width: 767px){
-  h1 {
-    font-size: 4rem;
-  }
-} */
 
 `;
 

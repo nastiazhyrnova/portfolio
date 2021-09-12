@@ -15,6 +15,10 @@ const LayoutStyled = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+
+	@media (max-width: 767px) {
+		padding-top: 3.5rem;
+	}
 `;
 
 const MobileHeader = styled.div`
@@ -22,6 +26,7 @@ const MobileHeader = styled.div`
 	z-index: 98;
 	width: 100%;
 	position: fixed;
+	top: 0;
 	height: 3.5rem;
 	display: flex;
 	flex-direction: row;
@@ -38,20 +43,18 @@ const Logo = styled.img`
 `;
 
 const Layout = props => {
-	const [showMobileMenu, setShowMobileMenu] = useState(true);
+	const [showMobileMenu, setShowMobileMenu] = useState(false);
 	const theme = useSelector(state => state.theme);
 
 	return (
 		<LayoutStyled>
 			<MobileHeader>
-				{' '}
 				<Logo src={theme === 'light' ? logoDark : logoLight} alt='Logo nZh' />
 			</MobileHeader>
 			<Burger
 				isActive={showMobileMenu}
 				onClick={() => setShowMobileMenu(!showMobileMenu)}
 			/>
-
 			<Header
 				showMobile={showMobileMenu}
 				closeMobileMenu={() => setShowMobileMenu(false)}
