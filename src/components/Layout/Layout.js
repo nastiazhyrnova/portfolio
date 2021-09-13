@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
+import { HashLink } from 'react-router-hash-link';
 
 import styled from 'styled-components';
 
@@ -49,7 +50,9 @@ const Layout = props => {
 	return (
 		<LayoutStyled>
 			<MobileHeader>
-				<Logo src={theme === 'light' ? logoDark : logoLight} alt='Logo nZh' />
+				<HashLink to='/#home' smooth>
+					<Logo src={theme === 'light' ? logoDark : logoLight} alt='Logo nZh' />
+				</HashLink>
 			</MobileHeader>
 			<Burger
 				isActive={showMobileMenu}

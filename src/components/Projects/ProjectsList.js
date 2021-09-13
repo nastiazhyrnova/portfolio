@@ -27,7 +27,7 @@ export const PROJECTSLIST = [
 		title: '"VeVeScan": Vegan and vegetarian food barcode scanner',
 		short_description:
 			'Progressive Web App with an access to the camera: after scanning product barcode shows if a product is vegan or vegetarian and, in case not, all ingredients in question. Connected to Open Food Facts API (mostly Spanish products).',
-		tags: ['PWA', 'RestAPI', 'reactHooks', 'myDesign'],
+		tags: ['PWA', 'RestAPI', 'reactHooks', 'myMockup'],
 		stack: ['ReactJS', 'JavaScript', 'HTML', 'CSS', 'SASS'],
 		demo: 'https://vevescan.web.app/',
 		git: 'https://github.com/nastiazhyrnova/VeVeScan',
@@ -44,7 +44,7 @@ export const PROJECTSLIST = [
 			'authentication',
 			'cardPayment',
 			'RestAPI',
-			'myDesign',
+			'myMockup',
 		],
 		stack: [
 			'ReactJS',
@@ -76,7 +76,7 @@ export const PROJECTSLIST = [
 		title: 'Meme Generator',
 		short_description:
 			'SPA to generate a meme: upload a photo, write texts and download your ready to post meme image.',
-		tags: ['reactHooks', 'HTMLcanvas', 'myDesign'],
+		tags: ['reactHooks', 'HTMLcanvas', 'myMockup'],
 		stack: [
 			'ReactJS',
 			'JavaScript',
@@ -94,7 +94,7 @@ export const PROJECTSLIST = [
 		title: 'Login and load userlist',
 		short_description:
 			'Authentification form made with Reqres.in API. Once authenticated, user can access userlist or logout.',
-		tags: ['reactHooks', 'authentication', 'RestAPI', 'myDesign'],
+		tags: ['reactHooks', 'authentication', 'RestAPI', 'myMockup'],
 		stack: [
 			'ReactJS',
 			'Redux',
@@ -123,7 +123,7 @@ export const PROJECTSLIST = [
 		title: 'Hangman game',
 		short_description:
 			'Made with Vanilla JS. Fetches random words from Wordly API. You have 7 lives to guess a word.',
-		tags: ['vanillaJS', 'HTMLcanvas', 'RestAPI', 'game', 'myDesign'],
+		tags: ['vanillaJS', 'HTMLcanvas', 'RestAPI', 'game', 'myMockup'],
 		stack: ['JavaScript', 'HTML', 'CSS'],
 		demo: 'https://nastiazhyrnova.github.io/Hangman-app/',
 		git: 'https://github.com/nastiazhyrnova/Hangman-app',

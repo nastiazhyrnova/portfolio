@@ -1,3 +1,3 @@
 import { css } from 'styled-components';
 
-export const pageLayout = css``;
+export const pageTitle = css``;

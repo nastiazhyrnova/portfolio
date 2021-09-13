@@ -24,6 +24,7 @@ const ThemeToggle = () => {
 		<>
 			<Switch
 				className='react-switch'
+				// value={{ transform: [{ scaleX: 0.5 }, { scaleY: 0.5 }] }}
 				checked={theme === 'light' ? true : false}
 				onChange={toggleTheme}
 				aria-label='Toggle between dark and light mode'
@@ -51,7 +52,9 @@ const ThemeToggle = () => {
 						<IoIosMoon />
 					</IconContext.Provider>
 				}
-				handleDiameter={22}
+				height={22}
+				width={40}
+				handleDiameter={18}
 				onColor='#F5F5F5'
 				onHandleColor='#FFFFFF'
 				offColor='#777777'

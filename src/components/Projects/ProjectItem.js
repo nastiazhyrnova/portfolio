@@ -66,7 +66,6 @@ const SmallButtonsContainer = styled.div`
 	a {
 		width: 100%;
 		/* Commented out until Case studies are ready */
-
 		/* background-color: ${props => props.theme.componentsBg};
 		color: ${props => props.theme.mainText}; */
 		background-color: ${props => props.theme.additionalText};
@@ -77,6 +76,11 @@ const SmallButtonsContainer = styled.div`
 		font-size: 1rem;
 		border-radius: 0.75rem;
 		margin: 0;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		gap: 0.25rem;
 		&:hover {
 			cursor: pointer;
 			/* Commented out until Case studies are ready */

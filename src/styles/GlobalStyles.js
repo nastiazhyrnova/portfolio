@@ -22,7 +22,7 @@ const GlobalStyles = createGlobalStyle`
   background: #F15A29;
 }
 html {
-  font-size: 16px;
+  font-size: 14px;
 }
 body {
   background-color: ${props => props.theme.mainBg};
@@ -46,7 +46,7 @@ h1 {
 }
 h2 {
   font-size: 2.5rem;
-  padding: 1rem 0;
+  padding: 2rem 0 4rem;
 }
 h3 {
   font-size: 2.25rem;
@@ -55,6 +55,10 @@ h3 {
 h4 {
   font-size: 1.5rem;
   padding: 1.5rem 0;
+  font-weight: 600;
+}
+h5 {
+  font-size: 1.1rem;
   font-weight: 600;
 }
 .icon {

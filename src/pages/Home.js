@@ -27,7 +27,6 @@ const AccentColor = styled.h1`
 `;
 const Description = styled.p`
 	max-width: 800px;
-	text-align: justify;
 	margin-bottom: 2rem;
 `;
 const DevSkillsList = styled.ul`
@@ -51,8 +50,9 @@ const Home = props => {
 				</MainTitleWrapper>
 				<h4>Front-end Developer</h4>
 				<Description>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					Problem solver | Perfectionist | Adaptive and communicative |
+					Pixel-perfect design supporter | Fast learner | Great web dev and nice
+					person ;)
 				</Description>
 				<SocialNetworks />
 			</section>
@@ -76,7 +76,7 @@ const Home = props => {
 			<section id='cv'>
 				<h3>My full CV:</h3>
 				<a
-					href='https://nastiazhyrnova.com/cv.pdf'
+					href='/CV-Nastia-Zhyrnova.pdf'
 					target='_blank'
 					rel='noreferrer'
 					title='Download full CV'>
