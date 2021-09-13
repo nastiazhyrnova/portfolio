@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 
-import { HiDownload } from 'react-icons/hi';
-
 import Layout from '../components/Layout/Layout';
 import SocialNetworks from '../components/Navigation/SocialNetworks';
 import AppIcons from '../components/AppIcons/AppIcons';
-import Button from '../components/UI/Button';
-import Icon from '../components/UI/Icon';
+import DevSkillsList from '../components/CV/DevSkillsList';
+import DownloadCV from '../components/CV/DownloadCV';
 
 import { TECHS, OTHER } from '../components/AppIcons/AppsList';
 import myPhoto from '../assets/images/myPhoto.png';
@@ -29,16 +27,6 @@ const Description = styled.p`
 	max-width: 800px;
 	margin-bottom: 2rem;
 `;
-const DevSkillsList = styled.ul`
-	list-style-type: '→ ';
-	text-align: left;
-	margin: 0 auto;
-	max-width: 300px;
-
-	li {
-		padding-bottom: 0.5rem;
-	}
-`;
 
 const Home = props => {
 	return (
@@ -60,30 +48,13 @@ const Home = props => {
 				<h3>Tech stack & tools</h3>
 				<AppIcons list={TECHS} size='3.5rem' />
 				<h3>Dev skills & knowledge</h3>
-				<DevSkillsList>
-					<li>REST API</li>
-					<li>OOP</li>
-					<li>Chrome DevTools debugging</li>
-					<li>BEM</li>
-					<li>Clean Code Principles</li>
-					<li>SOLID, DRY, KISS, YAGNI</li>
-					<li>CLI</li>
-					<li>MVC</li>
-				</DevSkillsList>
+				<DevSkillsList />
 				<h3>Other software</h3>
 				<AppIcons list={OTHER} size='2.75rem' />
 			</section>
 			<section id='cv'>
-				<h3>My full CV:</h3>
-				<a
-					href='/CV-Nastia-Zhyrnova.pdf'
-					target='_blank'
-					rel='noreferrer'
-					title='Download full CV'>
-					<Button>
-						<Icon icon={<HiDownload />} /> Download CV
-					</Button>
-				</a>
+				<h3>My CV:</h3>
+				<DownloadCV>Download CV in PDF</DownloadCV>
 			</section>
 		</Layout>
 	);

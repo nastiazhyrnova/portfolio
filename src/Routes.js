@@ -18,9 +18,9 @@ const Routes = () => {
 			<Route path='/contact' exact>
 				<Contact />
 			</Route>
-			{/* <Route path='/about' exact>
+			<Route path='/hire-me' exact>
 				<About />
-			</Route> */}
+			</Route>
 			<Route path='*'>
 				<NotFound />
 			</Route>

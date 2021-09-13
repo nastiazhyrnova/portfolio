@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 const ButtonStyled = styled.button`
-	background-color: var(--accent-color);
-	color: var(--white-color);
+	background-color: ${props =>
+		props.bgColor ? props.bgColor : 'var(--accent-color)'};
+	color: ${props => (props.color ? props.color : 'var(--white-color)')};
 	outline: none;
 	border: none;
 	padding: 1rem 3rem;

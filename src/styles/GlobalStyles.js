@@ -30,12 +30,15 @@ body {
 }
 main, header, footer {
   margin: 0 auto;
-	padding: 0.5rem;
 	max-width: 1170px;
 	text-align: center;
 }
+header,footer {
+  padding: 0.5rem;
+}
 main {
   flex: 2 1 0;
+  padding: 1rem;
 }
 a {
   color: inherit;
@@ -60,6 +63,10 @@ h4 {
 h5 {
   font-size: 1.1rem;
   font-weight: 600;
+}
+h6 {
+  font-size: 1rem;
+  font-weight: 500;
 }
 .icon {
   vertical-align: middle;

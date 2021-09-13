@@ -1,15 +1,68 @@
 import { useEffect } from 'react';
-import styled from 'styled-components';
+import { useHistory } from 'react-router';
+import styled, { useTheme } from 'styled-components';
 
 import Layout from '../components/Layout/Layout';
+import Button from '../components/UI/Button';
+import SocialNetworks from '../components/Navigation/SocialNetworks';
+import AppIcons from '../components/AppIcons/AppIcons';
+import DevSkillsList from '../components/CV/DevSkillsList';
+import DownloadCV from '../components/CV/DownloadCV';
 
-const Title = styled.h2`
-	padding-bottom: 1rem;
+import myPhoto from '../assets/images/photo2.jpg';
+import { TECHS, OTHER } from '../components/AppIcons/AppsList';
+
+const Hero = styled.div`
+	padding-top: 2rem;
+	max-width: 800px;
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+	gap: 2rem;
+	margin-bottom: 2rem;
+	text-align: left;
+	img {
+		height: 250px;
+		border-radius: 50%;
+		margin: 0 auto;
+		padding-bottom: 1rem;
+	}
+	div {
+		h3 {
+			padding: 1rem 0;
+			margin: 0 auto;
+		}
+		p {
+			padding-bottom: 1rem;
+			text-align: justify;
+		}
+	}
+	@media (max-width: 767px) {
+		flex-direction: column;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
 `;
 
-const List = styled.ul`
+const Skills = styled.section`
+	padding-bottom: 4rem;
+	h3 {
+		padding-top: 4rem;
+	}
+	button {
+		margin: 4rem 0 0;
+	}
+`;
+
+const GoodAtList = styled.ul`
+	max-width: 800px;
+	margin: 0 auto;
 	list-style-type: '→  ';
 	color: var(--accent-color);
+	h3 {
+		padding-top: 0;
+		color: ${props => props.theme.mainText};
+	}
 	li {
 		h5,
 		p {
@@ -18,19 +71,84 @@ const List = styled.ul`
 		margin-bottom: 1.5rem;
 		text-align: justify;
 	}
+	@media (max-width: 767px) {
+		list-style: none;
+	}
+`;
+
+const WorkExperience = styled.section`
+	margin: 0 auto;
+	padding-bottom: 4rem;
+	h3 {
+		padding-top: 2rem;
+	}
+`;
+const Error404 = styled.p`
+	font-size: 4rem;
+	padding-bottom: 0;
+	font-weight: 700;
+`;
+
+const CTA = styled.p`
+	max-width: 500px;
+	margin: 0 auto;
+	font-size: 1.75rem;
+	font-weight: 600;
+	color: var(--accent-color);
 `;
 
 const About = () => {
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
+	// useEffect(() => {
+	// 	window.scrollTo(0, 0);
+	// }, []);
+
+	const history = useHistory();
+	const theme = useTheme();
 
 	return (
 		<Layout>
-			<Title>About me</Title>
-			<p>*Some details which are not included in my CV</p>
-			<h4>What I am good at:</h4>
-			<List>
+			<section>
+				<Hero>
+					<div>
+						<img src={myPhoto} alt='My photo' />
+						<SocialNetworks />
+					</div>
+					<div>
+						<h3>
+							Hi! I am Nastia and I am looking for a Front-end Developer job
+						</h3>
+						<p>
+							I am a self-taught ReactJS developer who is looking for a company
+							to start my path as a full-time programmer. I've worked in
+							business, marketing and finances, but COVID times gave me a chance
+							to realize what I am really passionate about (if you still wonder
+							what is it, it's programming ;) )
+						</p>
+						<p>
+							As much as it is fun to do my own projects, I would love to be
+							able finally to apply my knowledge to something real. I am very
+							eager to start, to meet new teammates and keep learning :)
+						</p>
+						<p>
+							<em>*Remote or in Málaga area</em>
+						</p>
+					</div>
+				</Hero>
+				<DownloadCV>Download CV</DownloadCV>
+			</section>
+			<Skills>
+				<h3>Tech stack & tools</h3>
+				<AppIcons list={TECHS} size='3.5rem' />
+				<h3>Dev skills & knowledge</h3>
+				<DevSkillsList />
+				<Button title='Projects' onClick={() => history.push('/projects')}>
+					My projects →
+				</Button>
+				<h3>Other software</h3>
+				<AppIcons list={OTHER} size='2.75rem' />
+			</Skills>
+			<GoodAtList>
+				<h3>What I am good at:</h3>
 				<li>
 					<h5>Learning: </h5>
 					<p>
@@ -111,8 +229,21 @@ const About = () => {
 						and it’s not fixable.
 					</p>
 				</li>
-			</List>
-			{/* <h3>Work experience</h3> */}
+			</GoodAtList>
+			<WorkExperience>
+				<h3>Front-end work experience</h3>
+				<Error404>404</Error404>
+				<p>Ooops! Not found...</p>
+				<Button
+					bgColor={theme.mainText}
+					color={theme.mainBg}
+					title='Schedule an interview with me :)'
+					onClick={() => history.push('/contact')}>
+					Fix this error!
+				</Button>
+			</WorkExperience>
+			<CTA>Are my skills is what your company may be interested in?</CTA>
+			<Button onClick={() => history.push('/contact')}>Contact me!</Button>
 		</Layout>
 	);
 };

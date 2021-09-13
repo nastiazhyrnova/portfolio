@@ -18,19 +18,19 @@ const SocialNetworks = props => {
 				icon={<AiFillGithub />}
 				link='https://github.com/nastiazhyrnova'
 				title='Github'
-				size='1.75rem'
+				size='1.5rem'
 			/>
 			<Icon
 				icon={<AiOutlineTwitter />}
 				link='https://twitter.com/nastiazdev'
 				title='Twitter'
-				size='1.75rem'
+				size='1.5rem'
 			/>
 			<Icon
 				icon={<AiFillLinkedin />}
 				link='https://www.linkedin.com/in/anastasiiazhyrnova/'
 				title='Linkedin'
-				size='1.75rem'
+				size='1.5rem'
 			/>
 		</IconsContainer>
 	);
