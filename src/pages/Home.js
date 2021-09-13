@@ -12,7 +12,7 @@ import { TECHS, OTHER } from '../components/AppIcons/AppsList';
 import myPhoto from '../assets/images/myPhoto.png';
 
 const Photo = styled.img`
-	height: 300px;
+	height: 225px;
 	border-radius: 50%;
 	margin: 4rem 0;
 `;
